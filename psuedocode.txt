@@ -1,0 +1,65 @@
+
+
+function sortTeams maxTsize minTsize
+
+Remove old db assets before starting
+------------------------------------------------------------------------
+usersInfo -> grab all users from userInfo
+------------------------------------------------------------------------
+//creates number of teams based on class size and max team size
+nteams = 0
+if ((usersInfo.size/maxTxize) % maxTsize){
+    nteams = usersInfo.size/maxTsize
+}
+else{
+    nteams = usersInfo.size/maxTsize + 1
+}
+------------------------------------------------------------------------
+//generate key value hash to represent team number, and the 'weight' of the members of the team
+teams = []
+//generate Teams with empty values for weight
+for (i = 1; i <= n; i++ )  {
+    teams.push(i, [])
+}
+-------------------------------------------------------------------------
+//sorts in descending order
+teams.reverseSort()
+-------------------------------------------------------------------------
+users = []
+//Generate a map containing users and the (weight) number of classes taken
+forEach user in UsersInfo {
+    count = 0
+    if users.csci_261 != NULL{
+        count++
+    }
+    if users.csci_262 != NULL {
+        count++
+    }
+    if .....{
+        ..........
+    }
+    users.push(user.id, count)
+}
+------------------------------------------------------------------------
+//distribute users to teams
+forEach user in users{
+    minWeight = team[1].sum
+    selectTeam = 1
+    forEach team in teams{
+        if sum(team) < minWeight && team.size < maxNoUsers {
+            minWeight = sum(team)
+            selectTeam = team.id
+        }
+    }
+    //Logic can go here for lang/preference (languages, social, comp, no pref)
+    addToTeam (selectTeam, user.id)
+    teams[selectTeam].push(user->weight)
+}
+------------------------------------------------------------------------
+function addToTeam (t_id, u_id) {
+  //Update user info table here by adding team_id attribute information into users_table
+  $user = USER::find(u_id)
+  $user->team_id = t_id
+  $user->save()
+}
+
