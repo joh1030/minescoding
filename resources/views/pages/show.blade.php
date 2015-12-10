@@ -50,11 +50,11 @@
 			echo "</div>";
 		}
 	?>
-	<a href="{{ url('/users/' . $user->id . '/edit') }}" class="btn btn-primary btn-sm" style='margin:5px 5px 5px 0px'>Edit</a>
+	<a href="{{ url('/users/' . $user->id . '/edit') }}" class="btn btn-primary">Edit</a>
 	<?php
 		if ($user->type == 'admin') {
 			$url = url('/admin');
-			echo "<a href='$url' class='btn btn-primary btn-sm'>Admin</a>";
+			echo "<a href='$url' class='btn btn-primary'>Admin</a>";
 		}
 	?>
 </div>
