@@ -1,11 +1,7 @@
-This Project Was done by Chase West, Jin Oh, and Erik Ponder
-
-Users can register and enter user information using the register form
-
-clicking on edit allows a user to edit (only) his or her profile.
+CSCI 445 - Fall 2015 - Final Project
 
 Admin user credentials:
-u/n: randr@msn.com
-p/w: ilikemusic
+username: randr@msn.com
+password: ilikemusic
 
-Admin can edit their own profile and start the algorithm by clicking "Generate Teams"
+Refresh migrations & seed: php artisan migrate:refresh --seed
