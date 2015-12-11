@@ -5,3 +5,11 @@ username: randr@msn.com
 password: ilikemusic
 
 Refresh migrations & seed: php artisan migrate:refresh --seed
+
+When cloned:
+composer install
+composer update
+copy ".env.example" to ".env" and change credentials
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
